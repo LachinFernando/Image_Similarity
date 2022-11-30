@@ -84,7 +84,7 @@ def visualizer(_distance, _nbors, number,_img_array ):
 #webapp UI
 
 #heading
-st.title("Image Simlarity")
+st.title("Image Similarity")
 
 #subheader
 st.subheader("Please upload an Image of a Cat or a Dog")
