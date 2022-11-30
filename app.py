@@ -88,7 +88,7 @@ def visualizer(_distance, _nbors, number,_img_array ):
 st.title("Image Simlarity")
 
 #subheader
-st.subheader("Please upload an Image")
+st.subheader("Please upload an Image of a Cat or a Dog")
 
 #file uploader
 image = st.file_uploader("Please Upload an Image",accept_multiple_files=False, help="Upload an image to find the similar Images")
