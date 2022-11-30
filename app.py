@@ -18,7 +18,7 @@ config = {
     "databaseURL" : "https://test-406ce-default-rtdb.firebaseio.com/"
 }
 
-#functions
+###########################################################################functions
 def convert_test_data(img_path):
   
   import numpy as np
@@ -79,10 +79,9 @@ def visualizer(_distance, _nbors, number,_img_array ):
           # we get cosine distance, to convert to similarity we do 1 - cosine_distance
           ax.set_title(f"Sim: {1 - _distance[i-1]:.2f}")
   st.pyplot(fig)
+#############################################################################################
 
-
-
-
+#webapp UI
 
 #heading
 st.title("Image Simlarity")
@@ -127,7 +126,6 @@ if image:
 
       #downloading the images from the firebase
       firebase = Firebase(config)
-      #downloading an image to the firebase
       storage = firebase.storage()
       
       #downloading nbors
@@ -136,11 +134,3 @@ if image:
           storage.child(image_fb).download(f"assets/{index}.jpg")
 
       visualizer(distance, nbors, no_nbors, img_array)
-
-
-
-
-
-
-
-
